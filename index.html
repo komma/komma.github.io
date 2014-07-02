@@ -8,10 +8,31 @@
 <title>KOMMA Project</title>
 <link rel="shortcut icon" href="assets/ico/komma16px.ico">
 <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <style>
 body {
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
+
+.current-release.panel-default>.panel-heading {
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	color: #fff;
+}
+
+.current-release.panel-default, .current-release.panel-default>.panel-heading+.panel-collapse .panel-body, .current-release pre
+	{
+	border-color: #4cae4c;
+}
+
+.current-release pre {
+	color: black;
+}
+
+.jumbotron p.small {
+	font-size: 12pt;
 }
 </style>
 
@@ -23,14 +44,64 @@ body {
 		<h1>KOMMA</h1>
 		<p>RDF for Eclipse &ndash; Framework &amp; Editors</p>
 
-		<p style="font-size: 10pt;">KOMMA is an adaptable framework for the management and editing of RDF, RDFS and OWL. It provides Object-Triple-Mapping (comparable to JPA), an Editing framework, Eclipse RCP and RAP integration and full <a href="http://www.openrdf.org/">OpenRDF Sesame support.</a></p>
+		<p class="small">
+			KOMMA is an adaptable framework for the management and editing of
+			RDF, RDFS and OWL. It provides Object-Triple-Mapping (comparable to
+			JPA), an Editing framework, Eclipse RCP and RAP integration and full
+			<a href="http://www.openrdf.org/">OpenRDF Sesame support.</a>
+		</p>
 		<p>
-			<a href="http://komma.sf.net/docs/" class="btn btn-primary btn-lg"
+			<a href="http://komma.enilink.net/docs/" class="btn btn-primary btn-lg"
 				role="button">Documentation</a>
 			<a href="https://groups.google.com/forum/#!forum/komma-discuss" class="btn btn-info btn-lg"
 				role="button">Discussion</a>
 		</p>
-
+	</div>
+	<h4>Available releases of KOMMA:</h4>
+	<p>
+		KOMMA can also be found on the <a
+			href="http://marketplace.eclipse.org/content/komma-rdf-eclipse">Eclipse
+			Marketplace</a>.
+	</p>
+	<div class="panel-group" id="releases">
+		<div class="current-release panel panel-default">
+			<div class="panel-heading" >
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#releases" href="#v1-1-0">Version
+						1.1.0 (current)</a> <a
+						href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1499634"
+						title="Drag and drop into a running Eclipse Indigo workspace to install KOMMA - RDF for Eclipse">
+						<img
+						src="http://marketplace.eclipse.org/sites/all/modules/custom/marketplace/images/installbutton.png" />
+					</a>
+				</h4>
+			</div>
+			<div id="v1-1-0" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>Eclipse Update Site:</p>
+					<pre style="width: 100%">http://komma.enilink.net/updates/1.1.0/</pre>
+					<p>Notes:</p>
+					<ul>
+						<li>Support for Eclipse Luna (4.4) and Java 8</li>
+						<li>Fixed several memory leaks and improved caching</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#releases" href="#v1-0-0">Version
+						1.0.0</a>
+				</h4>
+			</div>
+			<div id="v1-0-0" class="panel-collapse collapse">
+				<div class="panel-body">
+					<p>Eclipse Update Site:</p>
+					<pre style="width: 100%">http://komma.enilink.net/updates/1.0.0/</pre>
+				</div>
+			</div>
+		</div>
 	</div>
 	<small>KOMMA is open-source software by <a href="http://www.iwu.fraunhofer.de/">Fraunhofer IWU</a>.</small>
 	<div class="row" style="margin-top: 50px; font-size: small; color: #888888">
