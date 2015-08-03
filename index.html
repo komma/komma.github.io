@@ -22,8 +22,8 @@ body {
 	color: #fff;
 }
 
-.current-release.panel-default, .current-release.panel-default>.panel-heading+.panel-collapse .panel-body, .current-release pre
-	{
+.current-release.panel-default, .current-release.panel-default>.panel-heading+.panel-collapse .panel-body,
+	.current-release pre {
 	border-color: #4cae4c;
 }
 
@@ -34,13 +34,83 @@ body {
 .jumbotron p.small {
 	font-size: 12pt;
 }
+
+#forkongithub {
+	display: none;
+}
+
+#forkongithub * {
+	box-sizing: content-box;
+}
+
+#forkongithub a {
+	background: #AAA;
+	color: #fff;
+	text-decoration: none;
+	font-family: arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px 40px;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	position: relative;
+	transition: 0.5s;
+}
+
+#forkongithub a:hover {
+	background: #3B08AF;
+	color: #fff;
+}
+
+#forkongithub a::before, #forkongithub a::after {
+	content: "";
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 1px;
+	background: #fff;
+}
+
+#forkongithub a::after {
+	bottom: 1px;
+	top: auto;
+}
+
+@media screen and (min-width:800px) {
+	#forkongithub {
+		position: fixed;
+		display: block;
+		top: 0;
+		right: 0;
+		width: 200px;
+		overflow: hidden;
+		height: 200px;
+		z-index: 9999;
+	}
+	#forkongithub a {
+		width: 200px;
+		position: absolute;
+		top: 60px;
+		right: -60px;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+	}
+}
 </style>
 
 </head>
 
 <body class="container-fluid" style="max-width: 750px">
 	<div class="jumbotron">
-		<img src="assets/logo.png" class="pull-right" />
+		<span id="forkongithub"><a
+			href="https://github.com/komma/komma-rdf">Fork me on GitHub</a></span> <img
+			src="assets/logo.png" class="pull-right" />
 		<h1>KOMMA</h1>
 		<p>RDF for Eclipse &ndash; Framework &amp; Editors</p>
 
@@ -51,10 +121,13 @@ body {
 			<a href="http://www.openrdf.org/">OpenRDF Sesame support.</a>
 		</p>
 		<p>
-			<a href="http://komma.enilink.net/docs/" class="btn btn-primary btn-lg"
-				role="button">Documentation</a>
-			<a href="https://groups.google.com/forum/#!forum/komma-discuss" class="btn btn-info btn-lg"
-				role="button">Discussion</a>
+			<a href="http://komma.enilink.net/docs/"
+				class="btn btn-primary btn-lg" role="button">Documentation</a> <a
+				href="https://groups.google.com/forum/#!forum/komma-discuss"
+				class="btn btn-info btn-lg" role="button">Discussion</a>
+				<a
+				href="https://github.com/komma/komma-rdf"
+				class="btn btn-success btn-lg" role="button">Github</a>
 		</p>
 	</div>
 	<h4>Available releases:</h4>
@@ -65,7 +138,7 @@ body {
 	</p>
 	<div class="panel-group" id="releases">
 		<div class="current-release panel panel-default">
-			<div class="panel-heading" >
+			<div class="panel-heading">
 				<h4 class="panel-title">
 					<a data-toggle="collapse" data-parent="#releases" href="#v1-1-0">Version
 						1.1.0 (current)</a> <a
@@ -103,13 +176,18 @@ body {
 			</div>
 		</div-->
 	</div>
-	<small>KOMMA is open-source software by <a href="http://www.iwu.fraunhofer.de/">Fraunhofer IWU</a>.</small>
-	<div class="row" style="margin-top: 50px; font-size: small; color: #888888">
-		<div class="col-sm-8">
-			The development has received funding by the European Union (European Regional Development Fund) and Germany's Free State of Saxony within the Cluster of Excellence &quot;Energy-Efficient Product and Process Innovation in Production Engineering&quot; (eniPROD&reg;) and others.
-		</div>
-		<div class="col-sm-4" style="text-align:center;">
-			<img src="assets/efre.png" style="max-width:200px" />
+	<small>KOMMA is open-source software by <a
+		href="http://www.iwu.fraunhofer.de/">Fraunhofer IWU</a>.
+	</small>
+	<div class="row"
+		style="margin-top: 50px; font-size: small; color: #888888">
+		<div class="col-sm-8">The development has received funding by
+			the European Union (European Regional Development Fund) and Germany's
+			Free State of Saxony within the Cluster of Excellence
+			&quot;Energy-Efficient Product and Process Innovation in Production
+			Engineering&quot; (eniPROD&reg;) and others.</div>
+		<div class="col-sm-4" style="text-align: center;">
+			<img src="assets/efre.png" style="max-width: 200px" />
 		</div>
 	</div>
 	<script>
